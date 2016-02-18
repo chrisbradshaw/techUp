@@ -12,3 +12,4 @@ class Conference < ActiveRecord::Base
   validates :location, presence: true
   validates :date, presence: true
 end
+
