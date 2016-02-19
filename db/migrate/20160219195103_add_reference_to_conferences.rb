@@ -1,5 +1,5 @@
-class AddReferenceToEvents < ActiveRecord::Migration
+class AddReferenceToConferences < ActiveRecord::Migration
   def change
-    add_reference :events, :attendee, index: true
+    add_reference :conferences, :attendee, index: true
   end
 end

@@ -1,5 +1,5 @@
 class Api::V1::TopicSerializer < ActiveModel::Serializer
-  attributes :id, :name, :display_picture
+  attributes :id, :name
   has_many :conferences
 
 
