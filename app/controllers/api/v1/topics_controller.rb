@@ -19,4 +19,29 @@ end
 
   end
 
+   def create
+      topic = Topic.create(topic_params)
+          render(
+              root: false,
+              json: topic,
+              serializer: Api::V1::TopicSerializer
+          )
+    end
+
+    def update
+
+        topic = Topic.find(params[:id])
+        topic.update(topic_params)
+          render(
+              root: false,
+              json: topic,
+              serializer: Api::V1::TopicSerializer
+          )
+    end
+
+    private
+    def topic_params
+        params.permit(:name)
+    end
+
 end

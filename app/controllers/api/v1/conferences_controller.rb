@@ -19,4 +19,29 @@ end
 
   end
 
+   def create
+      conference = Conference.create(conference_params)
+          render(
+              root: false,
+              json: conference,
+              serializer: Api::V1::ConferenceSerializer
+          )
+    end
+
+    def update
+
+        conference = Conference.find(params[:id])
+        conference.update(conference_params)
+          render(
+              root: false,
+              json: conference,
+              serializer: Api::V1::ConferenceSerializer
+          )
+    end
+
+    private
+    def conference_params
+        params.permit(:title, :location, :date)
+    end
+
 end
