@@ -7,7 +7,7 @@ topic5 = Topic.create(name: "Zoe Zack")
 topic6 = Topic.create(name: "Bill Burray")
 topic7 = Topic.create(name: "Charlie Chuck")
 
-puts "creating conferencd data"
+puts "creating conferences data"
 pub1 = Conference.create(title: "ABC sadsadPublisher", location: "NY", date: Time.now, topic_id: topic1.id)
 puts "conf #{pub1.inspect}"
 pub2 = Conference.create(title: "ABC sadasPublisher", location: "TX", date: Time.now, topic_id: topic2.id)
