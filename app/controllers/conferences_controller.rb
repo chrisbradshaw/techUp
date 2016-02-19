@@ -1,2 +1,0 @@
-class ConferencesController < ApplicationController
-end
