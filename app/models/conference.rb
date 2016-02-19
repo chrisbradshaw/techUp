@@ -4,8 +4,8 @@ class Conference < ActiveRecord::Base
   scope :past, -> { where "date <= ?", Time.zone.now }
 
   belongs_to :creator, class_name: 'User'
-  has_many :attendees, through: :user_conferences
-  has_many :user_conferences
+  has_many :attendees, through: :users_conferences
+  has_many :users_conferences
 
 
   validates :title, presence: true
