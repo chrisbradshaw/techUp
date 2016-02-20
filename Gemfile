@@ -29,3 +29,5 @@ gem "active_model_serializers", '~> 0.9.3'
 
 
 gem 'pry-rails'
+
+gem 'rack-cors', :require => 'rack/cors'
