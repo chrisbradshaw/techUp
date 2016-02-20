@@ -2,8 +2,8 @@ class Api::V1::TopicsController < ApplicationController
 
 def index
          render(
-            root: false,
-            status: :ok,
+            # root: true,
+            # status: :ok,
             json: Topic.all,
             each_serializer: Api::V1::TopicSerializer
         )
@@ -11,8 +11,8 @@ end
 
   def show
        render(
-            root: false,
-            status: :ok,
+            # root: false,
+            # status: :ok,
             json: Topic.find(params[:id]),
             serializer: Api::V1::TopicSerializer
         )
@@ -22,7 +22,7 @@ end
    def create
       topic = Topic.create(topic_params)
           render(
-              root: false,
+              # root: false,
               json: topic,
               serializer: Api::V1::TopicSerializer
           )
@@ -33,7 +33,7 @@ end
         topic = Topic.find(params[:id])
         topic.update(topic_params)
           render(
-              root: false,
+              # root: false,
               json: topic,
               serializer: Api::V1::TopicSerializer
           )
