@@ -7,6 +7,7 @@ topic5 = Topic.create(name: "SQL")
 topic6 = Topic.create(name: "Python")
 topic7 = Topic.create(name: "Elixir")
 
+
 puts "creating conference data"
 pub1 = Conference.create(title: "Ember.js: A Superior Framework", location: "New York, NY", date: Time.now, topic_id: Topic.find(36).id)
 puts "conf #{pub1.inspect}"
