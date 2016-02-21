@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+    devise_for :users, controllers: { sessions: 'sessions' }
+
     namespace :api do
       namespace :v1 do
         resources :users, except: [:new, :edit]
         resources :topics, except: [:new, :edit]
         resources :conferences, except: [:new, :edit]
+        get "users/me", to: "users#me"
       end
+
     end
 
 

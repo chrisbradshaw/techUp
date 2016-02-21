@@ -27,6 +27,9 @@ gem "active_model_serializers", '~> 0.9.3'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+#OAuth
+gem 'bcrypt-ruby', '~> 3.0.0' 
+gem 'devise', '~> 3.5', '>= 3.5.6'
 
 gem 'pry-rails'
 gem 'rack-cors', :require => 'rack/cors'

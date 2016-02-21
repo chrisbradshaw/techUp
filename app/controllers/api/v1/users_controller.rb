@@ -49,8 +49,13 @@ end
           )
     end
 
+    def me
+        cu = {user: current_user}
+        render json: cu
+    end
+
     private
     def user_params
-        params.permit(:name, :username, :email)
+        params.permit(:name, :username, :email, :password_digest, :authentication_token)
     end
 end
