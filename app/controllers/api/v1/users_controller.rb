@@ -22,7 +22,7 @@ end
   def create
       user = User.create(user_params)
           render(
-              root: false,
+              # root: false,
               json: user,
               serializer: Api::V1::UserSerializer
           )
@@ -33,7 +33,7 @@ end
         user = User.find(params[:id])
         user.update(user_params)
           render(
-              root: false,
+              # root: false,
               json: user,
               serializer: Api::V1::UserSerializer
           )

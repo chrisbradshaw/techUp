@@ -1,31 +1,31 @@
 
-topic1 = Topic.create(name: "James Jackson")
-topic2 = Topic.create(name: "Roberta Rock")
-topic3 = Topic.create(name: "Daniel Duck")
-topic4 = Topic.create(name: "Amanda Djidjinski")
-topic5 = Topic.create(name: "Zoe Zack")
-topic6 = Topic.create(name: "Bill Burray")
-topic7 = Topic.create(name: "Charlie Chuck")
+topic1 = Topic.create(name: "Ember.js")
+topic2 = Topic.create(name: "React.js")
+topic3 = Topic.create(name: "Angular.js")
+topic4 = Topic.create(name: "Ruby on Rails")
+topic5 = Topic.create(name: "SQL")
+topic6 = Topic.create(name: "Python")
+topic7 = Topic.create(name: "Elixir")
 
-puts "creating conferencd data"
-pub1 = Conference.create(title: "ABC sadsadPublisher", location: "NY", date: Time.now, topic_id: topic1.id)
+puts "creating conference data"
+pub1 = Conference.create(title: "Ember.js: A Superior Framework", location: "New York, NY", date: Time.now, topic_id: Topic.find(36).id)
 puts "conf #{pub1.inspect}"
-pub2 = Conference.create(title: "ABC sadasPublisher", location: "TX", date: Time.now, topic_id: topic2.id)
+pub2 = Conference.create(title: "React.js and the DOM", location: "Dallas, TX", date: Time.now, topic_id: topic2.id)
 puts "conf #{pub2.inspect}"
-pub3 = Conference.create(title: "ABC dasPublisher", location: "CO", date: Time.now, topic_id: topic3.id)
+pub3 = Conference.create(title: "Angular 2.0: What's Next", location: "San Francisco, CA", date: Time.now, topic_id: topic3.id)
 puts "conf #{pub3.inspect}"
-pub4 = Conference.create(title: "ABC dsadasPblisher", location: "CO", date: Time.now, topic_id: topic1.id)
-pub5 = Conference.create(title: "ABC sadasPublsher", location: "CO", date: Time.now, topic_id: topic1.id)
-pub6 = Conference.create(title: "ABC dsadasPubliher", location: "C", date: Time.now, topic_id: Topic.find(1).id)
+pub4 = Conference.create(title: "Building an API with Rails 5", location: "Denver, CO", date: Time.now, topic_id: Topic.find(38).id)
+pub5 = Conference.create(title: "Ember Front End with Rails API", location: "Salt Lake City, UT", date: Time.now, topic_id: Topic.find(36).id)
+pub6 = Conference.create(title: "History of the Silk Road", location: "Los Angeles, CA", date: Time.now, topic_id: Topic.find(39).id)
 
 puts "*****"
 
-user1 = User.create(username: "The Great Escape", name: "author7", email: "pub1@gmail.com")
-user2 = User.create(username: "Saving Myself", name: "author6", email: "pub1@gmail.com")
-user3 = User.create(username: "The Killer Doctors", name: "author5", email: "pub1@gmail.com")
-user4 = User.create(username: "Marianne", name: "author4", email: "pub1@gmail.com")
-user5 = User.create(username: "On the Verge of Salvation", name: "author4", email: "pub2@aol.com")
-user6 = User.create(username: "Fields of L", name: "author3", email: "pub2@aol.com")
-user7 = User.create(username: "Waterfront", name: "author2", email: "pub2@aol.com")
-user8 = User.create(username: "Bored as Hell", name: "author6", email: "pub3@aol.com")
-user9 = User.create(username: "History of the Silk Road", name: "author7", email: "pub3@aol.com")
+user1 = User.create(username: Faker::Internet.user_name, name: Faker::Name.name, email: Faker::Internet.email)
+user2 = User.create(username: Faker::Internet.user_name, name: Faker::Name.name, email: Faker::Internet.email)
+user3 = User.create(username: Faker::Internet.user_name, name: Faker::Name.name, email: Faker::Internet.email)
+user4 = User.create(username: Faker::Internet.user_name, name: Faker::Name.name, email: Faker::Internet.email)
+user5 = User.create(username: Faker::Internet.user_name, name: Faker::Name.name, email: Faker::Internet.email)
+user6 = User.create(username: Faker::Internet.user_name, name: Faker::Name.name, email: Faker::Internet.email)
+user7 = User.create(username: Faker::Internet.user_name, name: Faker::Name.name, email: Faker::Internet.email)
+user8 = User.create(username: Faker::Internet.user_name, name: Faker::Name.name, email: Faker::Internet.email)
+user9 = User.create(username: Faker::Internet.user_name, name: Faker::Name.name, email: Faker::Internet.email)
