@@ -52,7 +52,7 @@ end
 
     private
     def conference_params
-        params.require(:conference).permit(:title, :location)
+        params.require(:conference).permit(:title, :location, :date)
     end
 
 end
