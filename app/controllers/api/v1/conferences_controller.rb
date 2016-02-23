@@ -20,7 +20,6 @@ end
   end
 
    def create
-    binding.pry
       conference = Conference.create(conference_params)
           render(
               # root: false,
@@ -52,7 +51,7 @@ end
 
     private
     def conference_params
-        params.require(:conference).permit(:title, :location, :date)
+        params.require(:conference).permit(:title, :location, :date, :topic_id, :description)
     end
 
 end
