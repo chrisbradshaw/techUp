@@ -43,15 +43,15 @@ end
           topic = Topic.find(params[:id])
           topic.destroy
           render(
-            root: false,
-            status: :ok,
+            # root: false,
+            # status: :ok,
             json: {message: "Topic Removed"},
           )
     end
 
     private
     def topic_params
-        params.require(:topic).permit(:name)
+        params.require(:topic).permit(:name, :id)
     end
 
 end

@@ -1,7 +1,5 @@
 class Api::V1::TopicSerializer < ActiveModel::Serializer
   attributes :id, :name
-  has_many :conferences
-
 
 # use case: render information based on conditon such as admin (include_association?)
 
