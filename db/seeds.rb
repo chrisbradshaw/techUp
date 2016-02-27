@@ -9,15 +9,15 @@ topic7 = Topic.create(name: "Elixir")
 
 
 puts "creating conference data"
-pub1 = Conference.create(title: "Ember.js: A Superior Framework", location: "New York, NY", date: Time.now, topic_id: topic1.id)
+pub1 = Conference.create(title: "Ember.js: A Superior Framework", location: "New York, NY", description: Faker::Hacker.say_something_smart, date: Faker::Date.between(1.year.ago, 1.year.from_now), topic_id: topic1.id)
 puts "conf #{pub1.inspect}"
-pub2 = Conference.create(title: "React.js and the DOM", location: "Dallas, TX", date: Time.now, topic_id: topic2.id)
+pub2 = Conference.create(title: "React.js and the DOM", location: "Dallas, TX", description: Faker::Hacker.say_something_smart, date: Faker::Date.between(1.year.ago, 1.year.from_now), topic_id: topic2.id)
 puts "conf #{pub2.inspect}"
-pub3 = Conference.create(title: "Angular 2.0: What's Next", location: "San Francisco, CA", date: Time.now, topic_id: topic3.id)
+pub3 = Conference.create(title: "Angular 2.0: What's Next", location: "San Francisco, CA", description: Faker::Hacker.say_something_smart, date: Faker::Date.between(1.year.ago, 1.year.from_now), topic_id: topic3.id)
 puts "conf #{pub3.inspect}"
-pub4 = Conference.create(title: "Building an API with Rails 5", location: "Denver, CO", date: Time.now, topic_id: topic4.id)
-pub5 = Conference.create(title: "Ember Front End with Rails API", location: "Salt Lake City, UT", date: Time.now, topic_id: topic5.id)
-pub6 = Conference.create(title: "History of the Silk Road", location: "Los Angeles, CA", date: Time.now, topic_id: topic6.id)
+pub4 = Conference.create(title: "Building an API with Rails 5", location: "Denver, CO", description: Faker::Hacker.say_something_smart, date: Faker::Date.between(1.year.ago, 1.year.from_now), topic_id: topic4.id)
+pub5 = Conference.create(title: "Ember Front End with Rails API", location: "Salt Lake City, UT", description: Faker::Hacker.say_something_smart, date: Faker::Date.between(1.year.ago, 1.year.from_now), topic_id: topic5.id)
+pub6 = Conference.create(title: "History of the Silk Road", location: "Los Angeles, CA", description: Faker::Hacker.say_something_smart, date: Faker::Date.between(1.year.ago, 1.year.from_now), topic_id: topic6.id)
 
 puts "*****"
 
